@@ -13,21 +13,16 @@ Specs look like this:
 
 ```objective-c
 describe( @"Team", ^{
-
   context( @"when newly created", ^{
-
     it( @"should have a name", ^{
       id team = [ Team team ];
       [ [ team.name should ] equal: @"Black Hawks" ];
     });
-
     it( @"should have 11 players", ^{
       id team = [ Team team ];
       [ [ [ team should ] have: 11 ] players ];
     });
-
   });
-
 });
 ```
 
