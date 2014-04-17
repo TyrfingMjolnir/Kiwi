@@ -12,18 +12,22 @@ Tests (or rather specs) are written in Objective-C and run within the comfort of
 Specs look like this:
 
 ```objective-c
-describe(@"Team", ^{
-    context(@"when newly created", ^{
-        it(@"should have a name", ^{
-            id team = [Team team];
-            [[team.name should] equal:@"Black Hawks"];
-        });
+describe( @"Team", ^{
 
-        it(@"should have 11 players", ^{
-            id team = [Team team];
-            [[[team should] have:11] players];
-        });
+  context( @"when newly created", ^{
+
+    it( @"should have a name", ^{
+      id team = [ Team team ];
+      [ [ team.name should ] equal: @"Black Hawks" ];
     });
+
+    it( @"should have 11 players", ^{
+      id team = [ Team team ];
+      [ [ [ team should ] have: 11 ] players ];
+    });
+
+  });
+
 });
 ```
 
